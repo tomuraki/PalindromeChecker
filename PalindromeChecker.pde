@@ -33,7 +33,7 @@ public String onlyLetters(String sString){
   String ol= "";
   for(int i=0; i<sString.length(); i++)
    if(Character.isLetter(sString.charAt(i)))
-    ol=ol+i;
+    ol=ol+sString.charAt(i);
   System.out.println(ol);
    return ol;
 }
