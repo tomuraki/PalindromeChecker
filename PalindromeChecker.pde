@@ -26,7 +26,6 @@ public String noSpaces(String sWord)
   for(int i=0; i<sWord.length(); i++)
   if(sWord.charAt(i) != ' ')
     ns=ns+sWord.charAt(i);
-  //System.out.println(ns);
     return ns; 
 }
 public String onlyLetters(String sString){
@@ -34,7 +33,6 @@ public String onlyLetters(String sString){
   for(int i=0; i<sString.length(); i++)
    if(Character.isLetter(sString.charAt(i)))
     ol=ol+sString.charAt(i);
-  System.out.println(ol);
    return ol;
 }
 public String reverse(String sWord)
@@ -43,25 +41,18 @@ public String reverse(String sWord)
   String rev= "";
   for(int nI=nLast; nI>=0; nI--)
     rev=rev+sWord.substring(nI,nI+1);
-  //System.out.println(rev);
   return rev;
 }
 public boolean palindrome(String word)
 {
-  String s=noSpaces(word);
-  String c=noCapitals(word);
-  if(word.equals(reverse(word)))
+  String o=onlyLetters(word);
+  String c=noCapitals(o);
+  String r=reverse(c);
+  System.out.println(r);
+  if(r.equals(c))
     return true;
-  if(s.equals(reverse(s)))
-    return true;
-  if(c.equals(noSpaces(c)))
-    return true;
-
-    
-
   else
     return false;
-}  
  
 
 
