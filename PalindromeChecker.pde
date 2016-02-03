@@ -17,7 +17,6 @@ public void setup()
 public String noCapitals(String sWord)
 {
   String nc=sWord.toLowerCase();
-  System.out.println(nc);
   return nc;
 }
 public String noSpaces(String sWord)
